@@ -6,12 +6,10 @@ const AskMeAnythingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Store the message in the local storage
     const messages = JSON.parse(localStorage.getItem('messages') || '[]');
     messages.push(message);
     localStorage.setItem('messages', JSON.stringify(messages));
 
-    // Clear the input field
     setMessage('');
   };
 
